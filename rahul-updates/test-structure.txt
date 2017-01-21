@@ -1,1 +1,34 @@
-This is just a test.
+Having a robust testing structure is an integral part of your testing , for the successful delivery of a software/software system.
+
+A well structured testing structure has many benefits, both from the developers, project managers point of view and from the simplest tester who
+is tasked with writing the most basic unit or integration tests for your website. A well structured test approach reduces the time taken fro the
+debugging of a software fault/test script failure and other such failures that needs to be analysed and fixed, so the users have the optimal
+experience of the product that we are supposed to deliver.
+
+At MySwaasth, we belive in simplyfing things a lot and one of the most important points in simplyfying this is to have a planned structure for
+the tests that we have out there for the MySwaasth website front end and back end.
+
+This document deals with defining the test structure of the MySwaasth module, inside the MySwaasth product.
+
+
+At a high level, the test structure is modelled in this way
+
+
+
+Myswaasth [Home Page]
+
+-MYSWAASTH [Module Page]
+
+    -Smoke-tests
+
+	-UI-tests
+		-Full Page
+		-Sign In
+
+	-Functional-tests
+		-Sign In
+		-Login
+		-Sign Up
+		-Social Integration
+
+
