@@ -22,16 +22,33 @@ class TestPages(unittest.TestCase):
         driver = self.driver
         driver.get('http://myswaasth.sia.co.in/#/home/login')
 
-    def test_page_loaded(self):
-        print('\n'+str(test_cases(0)))
-        myPage = LoginPage(self.driver)
-        base_div = myPage.page_is_loaded('loading_page')
-        time.sleep(10)
-        if (base_div.isdisplayed()):
-            print('Base div is displayed')
+    def check_page_title(self,user):
+        print("\n"+str(test_cases(0)))
+        mainPage=LoginPage(self.driver)
+        check_page_title=mainPage.page_title("page_title")
+        self.assertEqual("Myswaasth",check_page_title)
 
+    def check_main_div_loaded(self,user):
+        print("\n"+str(test_cases(1)))
+        mainPage=LoginPage(self.driver)
+        check_base_div_loaded=mainPage.main_div_is_loaded("main_div_loaded")
+        if(check_base_div_loaded.isdisplayed()):
+            print("Main Page Div is loaded")
         else:
-            print("Base div is not displayed")
+            print("Main Div is not loaded")
+
+    def check_login_div_is_displayed(self,user):
+        print("\n"+str(test_cases(2)))
+        mainPage= LoginPage(self.driver)
+        check_sign_in_div = mainPage.right_div("sign_in_div")
+        if(check_sign_in_div.isdisplayed()):
+            print("Sign in div is displayed")
+            self.driver.get_screenshot_as_file("Passed_test.png")
+        else:
+            self.driver.get_screenshot_as_file('Failed_sign_in_div_saucelabs.png')
+            print("Test Failed")
+
+
 
 
     def tearDown(self):

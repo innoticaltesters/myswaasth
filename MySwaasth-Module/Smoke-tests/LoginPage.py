@@ -10,8 +10,11 @@ import requests
 
 
 class LoginPage(Page):
-    def page_is_loaded(self,user):
-        self.driver.find_element(*LoginPageLocators.EX)
+    def main_div_is_loaded(self,user):
+        self.driver.find_element(*LoginPageLocators.MAIN_DIV)
+
+    def page_title(self,user):
+        self.driver.get_title(*LoginPageLocators.PAGE_TITLE)
 
     def sign_in_disp(self,user):
         self.driver.find_element(*LoginPageLocators.SIGN_IN_DIV)
@@ -29,6 +32,7 @@ class LoginPage(Page):
 
     def get_encoding(self,user):
         r2= requests.get("")
+
 
 
 class HomePage(Page):

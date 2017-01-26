@@ -2,7 +2,8 @@ from operator import itemgetter
 
 users=[
 
-    {"name": "loading_page", "module": "MySwaasth"},
+    {"name": "page_title", "module": "MySwaasth"},
+    {"name":"main_div_loaded","module":"Myswaasth"},
 	{"name": "sign_in_div", "module": "MySwaasth"},
 	{"name": "right_div", "module": "MySwaasth"},
     {"name": "http_request", "module": "MySwaasth"},
