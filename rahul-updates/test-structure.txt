@@ -31,4 +31,12 @@ Myswaasth [Home Page]
 		-Sign Up
 		-Social Integration
 
+Branches to the MySwaasth Module -
+There are following branches to the MySwaasth page module - 
+		-UI Tests
+		-Functional Tests
+			-Sharing
+			-Login
+			-Blah
+			-Bluh
 
